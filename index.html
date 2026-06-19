@@ -84,30 +84,31 @@
     nav, section, .split-div, footer { position: relative; z-index: 1; }
 
     /* ── SECTION NAV BUTTON ── */
+    section { position: relative; }
     .section-nav-btn {
       position: absolute;
-      right: -22px;
+      right: 20px;
       top: 50%;
       transform: translateY(-50%);
-      width: 44px; height: 44px;
+      width: 48px; height: 48px;
       border-radius: 50%;
       background: rgba(11,15,23,0.95);
-      border: 1px solid rgba(34,211,238,0.35);
+      border: 1px solid rgba(34,211,238,0.40);
       color: var(--cyan);
       display: grid; place-items: center;
       cursor: pointer;
       transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
-      box-shadow: 0 0 18px rgba(34,211,238,0.14);
-      z-index: 10;
+      box-shadow: 0 0 20px rgba(34,211,238,0.18);
+      z-index: 20;
     }
     .section-nav-btn:hover {
-      background: rgba(34,211,238,0.12);
+      background: rgba(34,211,238,0.14);
       border-color: var(--cyan);
-      box-shadow: 0 0 28px rgba(34,211,238,0.30);
-      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 32px rgba(34,211,238,0.36);
+      transform: translateY(-50%) scale(1.12);
     }
-    .section-nav-btn svg { width: 18px; height: 18px; transition: transform .2s; }
-    .section-nav-btn:hover svg { transform: translateY(2px); }
+    .section-nav-btn svg { width: 20px; height: 20px; transition: transform .2s; }
+    .section-nav-btn:hover svg { transform: translateY(3px); }
 
     /* content blocks with rounded bg on top of dots */
     section .wrap {
@@ -867,8 +868,6 @@
       if (i === order.length - 1) return;
       const section = document.querySelector(id);
       if (!section) return;
-      const wrap = section.querySelector('.wrap');
-      if (!wrap) return;
 
       const btn = document.createElement('button');
       btn.className = 'section-nav-btn';
@@ -878,7 +877,7 @@
         const next = document.querySelector(order[i + 1]);
         if (next) next.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
-      wrap.appendChild(btn);
+      section.appendChild(btn);
     });
   </script>
 
