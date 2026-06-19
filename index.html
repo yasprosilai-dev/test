@@ -84,31 +84,31 @@
     nav, section, .split-div, footer { position: relative; z-index: 1; }
 
     /* ── SECTION NAV BUTTON ── */
-    section { position: relative; }
     .section-nav-btn {
       position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 48px; height: 48px;
+      top: 16px;
+      right: 16px;
+      width: 40px; height: 40px;
       border-radius: 50%;
       background: rgba(11,15,23,0.95);
       border: 1px solid rgba(34,211,238,0.40);
       color: var(--cyan);
       display: grid; place-items: center;
       cursor: pointer;
-      transition: background .2s, border-color .2s, transform .2s, box-shadow .2s;
-      box-shadow: 0 0 20px rgba(34,211,238,0.18);
-      z-index: 20;
+      transition: background .2s, border-color .2s, box-shadow .2s, transform .15s;
+      box-shadow: 0 0 16px rgba(34,211,238,0.16);
+      z-index: 5;
+      text-decoration: none;
     }
     .section-nav-btn:hover {
-      background: rgba(34,211,238,0.14);
+      background: rgba(34,211,238,0.12);
       border-color: var(--cyan);
-      box-shadow: 0 0 32px rgba(34,211,238,0.36);
-      transform: translateY(-50%) scale(1.12);
+      box-shadow: 0 0 28px rgba(34,211,238,0.34);
+      transform: scale(1.1);
+      color: var(--cyan);
     }
-    .section-nav-btn svg { width: 20px; height: 20px; transition: transform .2s; }
-    .section-nav-btn:hover svg { transform: translateY(3px); }
+    .section-nav-btn svg { width: 18px; height: 18px; transition: transform .2s; }
+    .section-nav-btn:hover svg { transform: translateY(2px); }
 
     /* content blocks with rounded bg on top of dots */
     section .wrap {
@@ -545,6 +545,7 @@
   <!-- HERO -->
   <section id="hero">
     <div class="wrap">
+      <a href="#pain" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
       <div class="hero-pill">
         <span class="hero-pill-dot"></span>
         Telegram-боты для бизнеса
@@ -564,6 +565,7 @@
   <!-- PROBLEM -->
   <section id="pain">
     <div class="wrap">
+      <a href="#how" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
       <div class="eyebrow-lbl"><span class="dot"></span> Проблема</div>
       <h2>Знакомо?</h2>
       <div class="pain-grid">
@@ -596,6 +598,7 @@
   <!-- HOW IT WORKS -->
   <section id="how">
     <div class="wrap">
+      <a href="#demo" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
       <div class="eyebrow-lbl"><span class="dot"></span> Путь клиента</div>
       <h2>Как работает бот</h2>
       <p class="section-sub">Клиент сам проходит все шаги. Вы получаете готовую заявку и управляете ею кнопками.</p>
@@ -641,6 +644,7 @@
   <!-- ADMIN DEMO -->
   <section id="demo">
     <div class="wrap">
+      <a href="#stats" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
       <div class="eyebrow-lbl"><span class="dot"></span> Сторона администратора</div>
       <h2>Что происходит после заявки</h2>
       <p class="section-sub">Каждый заказ — отдельный топик в Telegram-группе. Никаких CRM, никаких переключений — всё прямо в телефоне.</p>
@@ -706,6 +710,7 @@
   <!-- STATS -->
   <section id="stats">
     <div class="wrap">
+      <a href="#offers" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
       <div class="eyebrow-lbl"><span class="dot"></span> В цифрах</div>
       <h2>Что получает бизнес</h2>
       <div class="stats">
@@ -743,6 +748,7 @@
   <!-- OFFERS -->
   <section id="offers">
     <div class="wrap">
+      <a href="#faq" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
       <div class="eyebrow-lbl"><span class="dot"></span> Что предлагаю</div>
       <h2>Три варианта сотрудничества</h2>
       <p class="section-sub">В зависимости от того, что вам нужно прямо сейчас.</p>
@@ -801,6 +807,7 @@
   <!-- FAQ -->
   <section id="faq">
     <div class="wrap">
+      <a href="#cta" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
       <div class="eyebrow-lbl"><span class="dot"></span> Вопросы</div>
       <h2>Часто спрашивают</h2>
       <div class="faq">
@@ -860,24 +867,12 @@
       q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
     });
 
-    // Section nav buttons
-    const order = ['#hero','#pain','#how','#demo','#stats','#offers','#faq','#cta'];
-    const arrowSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
-
-    order.forEach((id, i) => {
-      if (i === order.length - 1) return;
-      const section = document.querySelector(id);
-      if (!section) return;
-
-      const btn = document.createElement('button');
-      btn.className = 'section-nav-btn';
-      btn.innerHTML = arrowSvg;
-      btn.setAttribute('aria-label', 'Следующий блок');
-      btn.addEventListener('click', () => {
-        const next = document.querySelector(order[i + 1]);
-        if (next) next.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.querySelectorAll('.section-nav-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(btn.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
-      section.appendChild(btn);
     });
   </script>
 
