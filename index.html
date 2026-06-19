@@ -429,20 +429,16 @@
       content: '✓'; color: var(--emerald);
       flex-shrink: 0; font-weight: 700;
     }
-    .community-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px;
+    .community-tags {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
     }
-    .community-item {
-      background: rgba(255,255,255,0.04);
+    .community-tag {
+      background: rgba(255,255,255,0.06);
       border: 1px solid var(--bd);
-      border-radius: 8px;
-      padding: 8px 10px;
-    }
-    .community-item strong {
-      display: block; font-size: 11px; font-weight: 700; color: var(--tx2); margin-bottom: 2px;
-    }
-    .community-item span {
-      font-size: 10px; color: var(--tx4); line-height: 1.4;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 11px; font-weight: 600; color: var(--tx2);
+      white-space: nowrap;
     }
     .offer-note {
       text-align: center; padding: 9px 16px; border-radius: 99px;
@@ -846,19 +842,19 @@
           <div class="offer-icon">🏛</div>
           <h3>Закрытое сообщество</h3>
           <p class="offer-desc">12 направлений для роста — всё в одном месте. Выбирай своё и двигайся.</p>
-          <div class="community-grid">
-            <div class="community-item"><strong>Trad now</strong><span>Торговые сигналы и разборы рынка</span></div>
-            <div class="community-item"><strong>INVESTология</strong><span>Крипта: стратегии, портфель, риски</span></div>
-            <div class="community-item"><strong>BOLTология</strong><span>Общение, обсуждение, вопрос-ответ</span></div>
-            <div class="community-item"><strong>MUDROлогия</strong><span>Мышление, психология, решения</span></div>
-            <div class="community-item"><strong>FAQ CRYPTOстарт</strong><span>Ответы для новичков в крипте</span></div>
-            <div class="community-item"><strong>MEMOлогия</strong><span>Анализ, торговля, сервисы</span></div>
-            <div class="community-item"><strong>Invest на земле</strong><span>Недвижимость и реальные активы</span></div>
-            <div class="community-item"><strong>AGENTология</strong><span>ИИ-агенты и автоматизация</span></div>
-            <div class="community-item"><strong>NEUROлогия</strong><span>Нейросети и ChatGPT понятно</span></div>
-            <div class="community-item"><strong>CONTENTология</strong><span>Заработок в соцсетях</span></div>
-            <div class="community-item"><strong>STEPология</strong><span>10 000 шагов: спорт, привычки</span></div>
-            <div class="community-item"><strong>Правила & дискл.</strong><span>Этика и правила сообщества</span></div>
+          <div class="community-tags">
+            <span class="community-tag">Trad now</span>
+            <span class="community-tag">INVESTология</span>
+            <span class="community-tag">BOLTология</span>
+            <span class="community-tag">MUDROлогия</span>
+            <span class="community-tag">FAQ CRYPTOстарт</span>
+            <span class="community-tag">MEMOлогия</span>
+            <span class="community-tag">Invest на земле</span>
+            <span class="community-tag">AGENTология</span>
+            <span class="community-tag">NEUROлогия</span>
+            <span class="community-tag">CONTENTология</span>
+            <span class="community-tag">STEPология</span>
+            <span class="community-tag">Правила & дискл.</span>
           </div>
           <div class="offer-note">🔗 Ссылка в описании под видео</div>
         </div>
