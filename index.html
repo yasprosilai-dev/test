@@ -33,7 +33,12 @@
       --rl:      10px;
     }
 
-    html { scroll-behavior: smooth; background: var(--bg); overflow-x: hidden; }
+    html {
+      scroll-behavior: smooth; background: var(--bg); overflow-x: hidden;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 100%;
+    }
 
     body {
       background: var(--bg);
@@ -131,9 +136,15 @@
     }
 
     /* ── LAYOUT ── */
+    section, .split-div {
+      scroll-snap-align: start;
+      min-height: 100dvh;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    footer { scroll-snap-align: start; }
     section { padding: 40px; }
     footer  { padding: 40px; }
-    .wrap { max-width: 1200px; margin: 0 auto; }
+    .wrap { max-width: 1200px; margin: 0 auto; width: 100%; }
 
     .eyebrow-lbl {
       display: inline-flex; align-items: center; gap: 8px;
@@ -319,14 +330,15 @@
     }
     .stat-l { font-size: 12px; color: var(--tx3); margin-top: 8px; }
 
+    /* push stats content up and offers content down so split-div is isolated */
+    #stats { padding-bottom: calc(50dvh); }
+    #offers { padding-top: calc(50dvh); }
+
     /* ── SPLIT DIVIDER ── */
     .split-div {
-      min-height: 100dvh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      padding: 80px 40px;
+      padding: 56px 40px;
       background:
-        radial-gradient(ellipse at 50% 40%, rgba(99,102,241,0.18), transparent 60%),
+        radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.16), transparent 60%),
         var(--bg2);
       border-top: 1px solid var(--bd);
       border-bottom: 1px solid var(--bd);
