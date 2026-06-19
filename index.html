@@ -15,7 +15,6 @@
       --bg:    #0c0805;
       --s1:    #161009;
       --s2:    #201610;
-      --s3:    #2c1e12;
       --bd:    #3d2c1a;
       --bd2:   #5a4028;
       --gold:  #c89638;
@@ -57,15 +56,13 @@
     }
     .logo { font-weight: 800; font-size: 15px; letter-spacing: -.01em; }
     .logo span { color: var(--gold); }
-    .nav-cta {
-      background: var(--gold); color: #1a0e00;
-      padding: 7px 18px; border-radius: 99px;
-      font-size: 13px; font-weight: 700;
-      transition: background .18s;
+    .nav-note {
+      font-size: 12px; color: var(--tx3);
+      border: 1px dashed var(--bd); border-radius: 99px;
+      padding: 5px 14px;
     }
-    .nav-cta:hover { background: var(--gold2); color: #1a0e00; }
 
-    /* ── SECTIONS ── */
+    /* ── LAYOUT ── */
     section { padding: 88px 40px; }
     .wrap { max-width: 1100px; margin: 0 auto; }
     hr.div { border: none; border-top: 1px solid var(--bd); }
@@ -101,30 +98,24 @@
       letter-spacing: -.03em; margin-bottom: 22px;
     }
     #hero h1 em { font-style: normal; color: var(--gold); }
-    #hero p {
+    #hero .hero-sub {
       font-size: 18px; color: var(--tx2);
-      max-width: 540px; margin-bottom: 40px; line-height: 1.6;
+      max-width: 540px; margin-bottom: 32px; line-height: 1.6;
     }
     .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }
-    .btn-primary {
+    .btn-outline {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--gold); color: #1a0e00;
-      padding: 13px 28px; border-radius: 99px;
-      font-size: 15px; font-weight: 700;
-      transition: background .18s, transform .15s;
-    }
-    .btn-primary:hover { background: var(--gold2); transform: translateY(-1px); color: #1a0e00; }
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: transparent;
       border: 1px solid var(--bd2); color: var(--tx2);
-      padding: 13px 28px; border-radius: 99px;
-      font-size: 15px; font-weight: 500;
+      padding: 11px 24px; border-radius: 99px;
+      font-size: 14px; font-weight: 500;
       transition: border-color .18s, color .18s;
     }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-desc-note {
+      margin-top: 20px; font-size: 13px; color: var(--tx3);
+    }
 
-    /* ── PAIN SECTION ── */
+    /* ── PAIN ── */
     .pain-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 12px; margin-top: 36px;
@@ -140,13 +131,11 @@
     /* ── HOW IT WORKS ── */
     .steps {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0; margin-top: 40px;
-      border: 1px solid var(--bd); border-radius: var(--rl);
-      overflow: hidden;
+      margin-top: 40px;
+      border: 1px solid var(--bd); border-radius: var(--rl); overflow: hidden;
     }
     .hw-step {
-      padding: 28px 24px;
-      border-right: 1px solid var(--bd);
+      padding: 28px 24px; border-right: 1px solid var(--bd);
     }
     .hw-step:last-child { border-right: none; }
     .hw-n {
@@ -159,70 +148,12 @@
     .hw-step h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
     .hw-step p  { font-size: 12px; color: var(--tx2); line-height: 1.55; }
 
-    /* ── OFFERS ── */
-    #offers { background: var(--s1); }
-    .offers-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 16px; margin-top: 40px;
-    }
-    .offer {
-      background: var(--bg); border: 1px solid var(--bd);
-      border-radius: var(--rl); padding: 32px;
-      display: flex; flex-direction: column;
-      transition: border-color .2s, transform .2s;
-    }
-    .offer:hover { border-color: var(--bd2); transform: translateY(-3px); }
-    .offer.featured {
-      background: var(--s2);
-      border-color: var(--grng);
-      position: relative;
-    }
-    .offer-badge {
-      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-      background: var(--gold); color: #1a0e00;
-      padding: 3px 16px; border-radius: 99px;
-      font-size: 11px; font-weight: 700; white-space: nowrap;
-    }
-    .offer-icon { font-size: 32px; margin-bottom: 18px; }
-    .offer h3 {
-      font-size: 18px; font-weight: 700; margin-bottom: 10px;
-      line-height: 1.2;
-    }
-    .offer-desc {
-      font-size: 13px; color: var(--tx2);
-      line-height: 1.6; flex: 1; margin-bottom: 24px;
-    }
-    .offer-list {
-      list-style: none; margin-bottom: 28px;
-    }
-    .offer-list li {
-      font-size: 13px; color: var(--tx2);
-      padding: 5px 0; border-bottom: 1px solid var(--bd);
-      display: flex; align-items: flex-start; gap: 8px;
-    }
-    .offer-list li:last-child { border-bottom: none; }
-    .offer-list li::before { content: '✓'; color: var(--green); flex-shrink: 0; }
-    .offer-btn {
-      display: block; text-align: center;
-      padding: 12px 20px; border-radius: 99px;
-      font-size: 14px; font-weight: 700;
-      transition: background .18s, color .18s, transform .15s;
-    }
-    .offer-btn.primary {
-      background: var(--gold); color: #1a0e00;
-    }
-    .offer-btn.primary:hover { background: var(--gold2); transform: translateY(-1px); }
-    .offer-btn.outline {
-      border: 1px solid var(--bd2); color: var(--tx2);
-    }
-    .offer-btn.outline:hover { border-color: var(--gold); color: var(--gold); }
-
     /* ── DEMO ── */
     .demo-grid {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 48px; align-items: start; margin-top: 36px;
     }
-    .demo-steps { display: flex; flex-direction: column; gap: 0; }
+    .demo-steps { display: flex; flex-direction: column; }
     .d-step {
       display: flex; gap: 16px;
       padding: 16px 0; border-bottom: 1px solid var(--bd);
@@ -241,10 +172,10 @@
       background: var(--s1); border: 1px solid var(--bd);
       border-radius: var(--rl); padding: 24px;
     }
-    .admin-panel h4 { font-size: 13px; font-weight: 600; margin-bottom: 16px; color: var(--tx2); }
-    .tg-kb {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+    .admin-panel-title {
+      font-size: 13px; font-weight: 600; color: var(--tx2); margin-bottom: 16px;
     }
+    .tg-kb { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
     .tg-btn {
       background: var(--s2); border: 1px solid var(--bd);
       border-radius: 8px; padding: 9px 12px;
@@ -253,9 +184,7 @@
     .tg-btn.wide   { grid-column: 1/-1; }
     .tg-btn.action { color: var(--gold2); border-color: var(--grng); }
     .tg-btn.danger { color: #c05858; border-color: rgba(192,88,88,.2); }
-    .panel-note {
-      font-size: 12px; color: var(--tx3); margin-top: 14px; line-height: 1.55;
-    }
+    .panel-note { font-size: 12px; color: var(--tx3); margin-top: 14px; line-height: 1.55; }
 
     /* ── STATS ── */
     .stats {
@@ -269,22 +198,64 @@
     .stat-n { font-size: 36px; font-weight: 800; color: var(--gold2); line-height: 1; }
     .stat-l { font-size: 12px; color: var(--tx2); margin-top: 6px; }
 
-    /* ── OFFER NOTE ── */
-    .offer-btn-note {
-      text-align: center; padding: 12px 20px;
-      border-radius: 99px; font-size: 13px; font-weight: 500;
+    /* ── SPLIT DIVIDER ── */
+    .split-div {
+      padding: 48px 40px;
+      background: var(--s1);
+      border-top: 1px solid var(--bd);
+      border-bottom: 1px solid var(--bd);
+      text-align: center;
+    }
+    .split-div p {
+      font-size: 12px; font-weight: 600;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--tx3);
+    }
+    .split-div h3 {
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 800; color: var(--tx); margin-top: 8px;
+      letter-spacing: -.02em;
+    }
+    .split-div h3 em { font-style: normal; color: var(--gold); }
+
+    /* ── OFFERS ── */
+    .offers-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 16px; margin-top: 40px;
+    }
+    .offer {
+      background: var(--s1); border: 1px solid var(--bd);
+      border-radius: var(--rl); padding: 32px;
+      display: flex; flex-direction: column;
+      transition: border-color .2s, transform .2s;
+    }
+    .offer:hover { border-color: var(--bd2); transform: translateY(-3px); }
+    .offer.featured {
+      background: var(--s2); border-color: var(--grng);
+      position: relative;
+    }
+    .offer-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: #1a0e00;
+      padding: 3px 16px; border-radius: 99px;
+      font-size: 11px; font-weight: 700; white-space: nowrap;
+    }
+    .offer-icon { font-size: 32px; margin-bottom: 18px; }
+    .offer h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
+    .offer-desc { font-size: 13px; color: var(--tx2); line-height: 1.6; flex: 1; margin-bottom: 24px; }
+    .offer-list { list-style: none; margin-bottom: 28px; }
+    .offer-list li {
+      font-size: 13px; color: var(--tx2);
+      padding: 5px 0; border-bottom: 1px solid var(--bd);
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .offer-list li:last-child { border-bottom: none; }
+    .offer-list li::before { content: '✓'; color: var(--green); flex-shrink: 0; }
+    .offer-note {
+      text-align: center; padding: 12px 20px; border-radius: 99px;
+      font-size: 13px; font-weight: 500;
       color: var(--tx3); border: 1px dashed var(--bd);
     }
-
-    /* ── DESC BANNER ── */
-    .desc-banner {
-      display: inline-flex; align-items: center; gap: 12px;
-      background: var(--gdim); border: 1px solid var(--grng);
-      border-radius: var(--rl); padding: 16px 28px;
-      font-size: 16px; font-weight: 600; color: var(--gold2);
-      margin-top: 28px;
-    }
-    .desc-arrow { font-size: 22px; }
 
     /* ── FAQ ── */
     .faq { display: flex; flex-direction: column; gap: 2px; margin-top: 36px; }
@@ -293,12 +264,11 @@
       border-radius: var(--r); overflow: hidden;
     }
     .faq-q {
-      padding: 18px 22px;
-      font-size: 14px; font-weight: 600; cursor: pointer;
+      padding: 18px 22px; font-size: 14px; font-weight: 600; cursor: pointer;
       display: flex; justify-content: space-between; align-items: center;
       user-select: none;
     }
-    .faq-q .arr { color: var(--tx3); font-size: 18px; transition: transform .2s; }
+    .faq-q .arr { color: var(--tx3); font-size: 18px; transition: transform .2s; flex-shrink: 0; margin-left: 12px; }
     .faq-item.open .arr { transform: rotate(45deg); }
     .faq-a {
       padding: 0 22px; max-height: 0; overflow: hidden;
@@ -307,11 +277,17 @@
     }
     .faq-item.open .faq-a { max-height: 200px; padding: 0 22px 18px; }
 
-    /* ── CTA BOTTOM ── */
+    /* ── CTA ── */
     #cta { text-align: center; }
     #cta h2 { max-width: 560px; margin: 0 auto 16px; }
-    #cta p { color: var(--tx2); margin-bottom: 36px; }
-    #cta .btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    #cta p { color: var(--tx2); margin-bottom: 28px; }
+    .desc-banner {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: var(--gdim); border: 1px solid var(--grng);
+      border-radius: var(--rl); padding: 16px 32px;
+      font-size: 17px; font-weight: 600; color: var(--gold2);
+    }
+    .desc-arrow { font-size: 22px; }
 
     /* ── FOOTER ── */
     footer {
@@ -324,12 +300,12 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .offers-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
-      .offer.featured { margin-top: 20px; }
       .demo-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 780px) {
       .nav-in { padding: 0 20px; }
       section { padding: 64px 20px; }
+      .split-div { padding: 36px 20px; }
       #hero h1 { font-size: 36px; }
       .stats { grid-template-columns: 1fr 1fr; }
       .steps { grid-template-columns: 1fr; }
@@ -338,8 +314,6 @@
       footer { padding: 24px 20px; }
     }
     @media (max-width: 480px) {
-      .hero-btns { flex-direction: column; }
-      .btn-primary, .btn-ghost { justify-content: center; }
       .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
       .stat-n { font-size: 28px; }
     }
@@ -351,27 +325,33 @@
   <nav>
     <div class="nav-in">
       <div class="logo">🌿 Striga<span>Print</span></div>
-      <div class="nav-cta">🔗 Ссылки в описании</div>
+      <div class="nav-note">🔗 Ссылки в описании под видео</div>
     </div>
   </nav>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--              В Е Р Х   С А Й Т А           -->
+  <!--         функционал · как работает           -->
+  <!-- ═══════════════════════════════════════════ -->
 
   <!-- HERO -->
   <section id="hero">
     <div class="wrap">
       <div class="eyebrow">✦ Telegram-боты для бизнеса</div>
       <h1>Бот принимает заказы,<br>пока вы <em>работаете</em></h1>
-      <p>Клиент проходит опрос, видит цену и отправляет заявку — без вашего участия. Вы получаете готовую карточку и ведёте заказ кнопками.</p>
+      <p class="hero-sub">Клиент проходит опрос, видит цену и отправляет заявку — без вашего участия. Вы получаете готовую карточку и ведёте заказ кнопками.</p>
       <div class="hero-btns">
-        <a href="#offers" class="btn-primary">Посмотреть варианты →</a>
-        <a href="#how" class="btn-ghost">Как это работает</a>
+        <a href="#how" class="btn-outline">Как это работает ↓</a>
+        <a href="#offers" class="btn-outline">Варианты сотрудничества ↓</a>
       </div>
-      <p style="margin-top:20px; font-size:13px; color:var(--tx3);">🔗 Все ссылки — в описании под видео</p>
+      <p class="hero-desc-note">🔗 Все ссылки — в описании под видео</p>
     </div>
   </section>
 
   <hr class="div">
 
-  <!-- PAIN -->
+  <!-- PROBLEM -->
   <section id="pain">
     <div class="wrap">
       <span class="lbl">Проблема</span>
@@ -380,7 +360,7 @@
         <div class="pain-card">
           <span class="pain-icon">💬</span>
           <h4>Переписка отнимает время</h4>
-          <p>Каждый клиент — это вопросы, уточнения, расчёт вручную. Вы тратите часы на то, что можно автоматизировать.</p>
+          <p>Каждый клиент — вопросы, уточнения, ручной расчёт. Вы тратите часы на то, что можно автоматизировать.</p>
         </div>
         <div class="pain-card">
           <span class="pain-icon">📉</span>
@@ -406,30 +386,29 @@
   <!-- HOW IT WORKS -->
   <section id="how">
     <div class="wrap">
-      <span class="lbl">Решение</span>
+      <span class="lbl">Путь клиента</span>
       <h2>Как работает бот</h2>
       <p class="sub">Клиент сам проходит все шаги. Вы получаете готовую заявку и управляете ею кнопками.</p>
-
       <div class="steps">
         <div class="hw-step">
           <div class="hw-n">1</div>
           <h4>Клиент пишет /start</h4>
-          <p>Получает приветствие, прайс и кнопку «Рассчитать стоимость».</p>
+          <p>Получает приветствие, прайс с ценами и кнопку «Рассчитать стоимость».</p>
         </div>
         <div class="hw-step">
           <div class="hw-n">2</div>
           <h4>Проходит опрос</h4>
-          <p>Выбирает размер, опции, отправляет фото, указывает доставку.</p>
+          <p>Выбирает размер, опции доставки и упаковки, отправляет фото файлом.</p>
         </div>
         <div class="hw-step">
           <div class="hw-n">3</div>
           <h4>Видит итоговую цену</h4>
-          <p>Бот сам рассчитывает стоимость и показывает полную разбивку.</p>
+          <p>Бот сам считает стоимость и показывает полную разбивку по пунктам.</p>
         </div>
         <div class="hw-step">
           <div class="hw-n">4</div>
           <h4>Заявка у вас</h4>
-          <p>Карточка появляется в группе. Вы ведёте заказ кнопками до передачи.</p>
+          <p>Карточка с деталями появляется в группе. Вы ведёте заказ кнопками до передачи.</p>
         </div>
       </div>
     </div>
@@ -437,117 +416,54 @@
 
   <hr class="div">
 
-  <!-- OFFERS -->
-  <section id="offers">
-    <div class="wrap">
-      <span class="lbl">Что предлагаем</span>
-      <h2>Выберите свой вариант</h2>
-      <p class="sub">Три пути — в зависимости от того, что вам нужно прямо сейчас.</p>
-
-      <div class="offers-grid">
-
-        <!-- 1 -->
-        <div class="offer">
-          <div class="offer-icon">🤖</div>
-          <h3>Готовый бот для печати на дереве</h3>
-          <p class="offer-desc">StrigaPrint Bot — уже написан, настроен и работает. Если у вас мастерская фотокартин, берёте и запускаете.</p>
-          <ul class="offer-list">
-            <li>8 форматов, прайс из базы</li>
-            <li>Приём фото, расчёт стоимости</li>
-            <li>Кнопки управления для вас</li>
-            <li>Двусторонний чат с клиентом</li>
-            <li>Настройка и деплой включены</li>
-          </ul>
-          <div class="offer-btn-note">🔗 Ссылка в описании под видео</div>
-        </div>
-
-        <!-- 2 FEATURED -->
-        <div class="offer featured">
-          <div class="offer-badge">Популярное</div>
-          <div class="offer-icon">🛠</div>
-          <h3>Бот под ваш бизнес</h3>
-          <p class="offer-desc">Разработаем бот с нуля под ваши товары, услуги и процессы. Любая ниша — доставка, запись, аренда, услуги.</p>
-          <ul class="offer-list">
-            <li>Опрос под вашу специфику</li>
-            <li>Ваши цены и логика расчёта</li>
-            <li>Интеграция с вашей базой</li>
-            <li>Панель управления заказами</li>
-            <li>Поддержка после запуска</li>
-          </ul>
-          <div class="offer-btn-note">🔗 Ссылка в описании под видео</div>
-        </div>
-
-        <!-- 3 -->
-        <div class="offer">
-          <div class="offer-icon">📚</div>
-          <h3>Закрытое сообщество</h3>
-          <p class="offer-desc">Хотите сами научиться делать таких ботов? Закрытый клуб: разборы, уроки, поддержка и живые проекты.</p>
-          <ul class="offer-list">
-            <li>Python + aiogram с нуля</li>
-            <li>Реальные проекты, не учебные</li>
-            <li>Разборы кода в прямом эфире</li>
-            <li>Закрытый чат участников</li>
-            <li>Доступ к исходникам ботов</li>
-          </ul>
-          <div class="offer-btn-note">🔗 Ссылка в описании под видео</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <hr class="div">
-
-  <!-- DEMO -->
+  <!-- ADMIN DEMO -->
   <section id="demo">
     <div class="wrap">
-      <span class="lbl">Подробнее</span>
+      <span class="lbl">Сторона администратора</span>
       <h2>Что происходит после заявки</h2>
-      <p class="sub">Администратор ведёт каждый заказ через отдельный топик в Telegram-группе — без сторонних CRM.</p>
+      <p class="sub">Каждый заказ — отдельный топик в Telegram-группе. Никаких CRM, никаких переключений — всё прямо в телефоне.</p>
 
       <div class="demo-grid">
-        <div>
-          <div class="demo-steps">
-            <div class="d-step">
-              <div class="d-n">1</div>
-              <div>
-                <h4>Карточка заказа</h4>
-                <p>Фото, размер, упаковка, доставка, итоговая сумма — всё в одном сообщении.</p>
-              </div>
+        <div class="demo-steps">
+          <div class="d-step">
+            <div class="d-n">1</div>
+            <div>
+              <h4>Карточка заказа</h4>
+              <p>Фото, размер, упаковка, доставка, итоговая сумма — всё в одном сообщении.</p>
             </div>
-            <div class="d-step">
-              <div class="d-n">2</div>
-              <div>
-                <h4>Утверждение и счёт</h4>
-                <p>Нажимаете кнопку — клиент получает подтверждение и реквизиты для оплаты.</p>
-              </div>
+          </div>
+          <div class="d-step">
+            <div class="d-n">2</div>
+            <div>
+              <h4>Утверждение и счёт</h4>
+              <p>Нажимаете кнопку — клиент получает подтверждение и реквизиты для оплаты.</p>
             </div>
-            <div class="d-step">
-              <div class="d-n">3</div>
-              <div>
-                <h4>Чек автоматически</h4>
-                <p>Клиент отправляет чек в боте — он сразу появляется у вас в топике.</p>
-              </div>
+          </div>
+          <div class="d-step">
+            <div class="d-n">3</div>
+            <div>
+              <h4>Чек от клиента</h4>
+              <p>Клиент отправляет чек в боте — он сразу появляется в вашем топике.</p>
             </div>
-            <div class="d-step">
-              <div class="d-n">4</div>
-              <div>
-                <h4>Прямой чат</h4>
-                <p>Когда заказ готов — открывается переписка без посторонних сообщений.</p>
-              </div>
+          </div>
+          <div class="d-step">
+            <div class="d-n">4</div>
+            <div>
+              <h4>Двусторонний чат</h4>
+              <p>Когда заказ готов — открывается прямая переписка с клиентом.</p>
             </div>
-            <div class="d-step">
-              <div class="d-n">5</div>
-              <div>
-                <h4>Закрытие заказа</h4>
-                <p>Нажали «Передан» — топик помечается ✅. Видно сразу что закрыто, что в работе.</p>
-              </div>
+          </div>
+          <div class="d-step">
+            <div class="d-n">5</div>
+            <div>
+              <h4>Закрытие</h4>
+              <p>«Передан» — топик помечается ✅. Сразу видно что в работе, что закрыто.</p>
             </div>
           </div>
         </div>
 
         <div class="admin-panel">
-          <h4>Кнопки управления заказом</h4>
+          <p class="admin-panel-title">Кнопки управления заказом</p>
           <div class="tg-kb">
             <div class="tg-btn action">1️⃣ Утвердить</div>
             <div class="tg-btn action">2️⃣ Выставить счёт</div>
@@ -591,6 +507,73 @@
     </div>
   </section>
 
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--              Н И З   С А Й Т А             -->
+  <!--           воронка · офферы · FAQ            -->
+  <!-- ═══════════════════════════════════════════ -->
+
+  <div class="split-div">
+    <p>Хотите такой же?</p>
+    <h3>Выберите свой <em>вариант</em></h3>
+  </div>
+
+  <!-- OFFERS -->
+  <section id="offers">
+    <div class="wrap">
+      <span class="lbl">Что предлагаем</span>
+      <h2>Три варианта сотрудничества</h2>
+      <p class="sub">В зависимости от того, что вам нужно прямо сейчас.</p>
+
+      <div class="offers-grid">
+
+        <div class="offer">
+          <div class="offer-icon">🤖</div>
+          <h3>Готовый бот для печати на дереве</h3>
+          <p class="offer-desc">StrigaPrint Bot — уже написан и работает. Если у вас мастерская фотокартин, берёте и запускаете.</p>
+          <ul class="offer-list">
+            <li>8 форматов, прайс из базы данных</li>
+            <li>Приём фото, автоматический расчёт</li>
+            <li>Кнопки управления для администратора</li>
+            <li>Двусторонний чат с клиентом</li>
+            <li>Настройка и деплой включены</li>
+          </ul>
+          <div class="offer-note">🔗 Ссылка в описании под видео</div>
+        </div>
+
+        <div class="offer featured">
+          <div class="offer-badge">Популярное</div>
+          <div class="offer-icon">🛠</div>
+          <h3>Бот под ваш бизнес</h3>
+          <p class="offer-desc">Разработаем бот с нуля под ваши товары, услуги и процессы. Любая ниша — доставка, запись, аренда, услуги.</p>
+          <ul class="offer-list">
+            <li>Опрос под вашу специфику</li>
+            <li>Ваши цены и логика расчёта</li>
+            <li>Интеграция с вашей базой данных</li>
+            <li>Панель управления заказами</li>
+            <li>Поддержка после запуска</li>
+          </ul>
+          <div class="offer-note">🔗 Ссылка в описании под видео</div>
+        </div>
+
+        <div class="offer">
+          <div class="offer-icon">📚</div>
+          <h3>Закрытое сообщество</h3>
+          <p class="offer-desc">Хотите сами научиться делать таких ботов? Закрытый клуб: разборы, уроки, поддержка и живые проекты.</p>
+          <ul class="offer-list">
+            <li>Python + aiogram с нуля</li>
+            <li>Реальные проекты, не учебные задачи</li>
+            <li>Разборы кода в прямом эфире</li>
+            <li>Закрытый чат участников</li>
+            <li>Доступ к исходникам готовых ботов</li>
+          </ul>
+          <div class="offer-note">🔗 Ссылка в описании под видео</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <hr class="div">
 
   <!-- FAQ -->
@@ -605,19 +588,19 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">Нужен ли мне сервер для работы бота? <span class="arr">+</span></div>
-          <div class="faq-a">Нет. Бот работает в Docker-контейнере на хостинге JustRunMy.App — это входит в стоимость или настраивается отдельно. Никаких серверов и VPS настраивать не нужно.</div>
+          <div class="faq-a">Нет. Бот работает в Docker-контейнере на хостинге — это входит в стоимость. Никаких серверов и VPS настраивать не нужно.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Могу ли я сам менять цены после запуска? <span class="arr">+</span></div>
-          <div class="faq-a">Да. Прайс меняется командами прямо в Telegram — без кода и без деплоя. Написали /setprice — цены обновились у всех клиентов сразу.</div>
+          <div class="faq-a">Да. Прайс меняется командами прямо в Telegram — без кода и без деплоя. Написали /setprice — цены обновились у всех новых клиентов сразу.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Что входит в закрытое сообщество? <span class="arr">+</span></div>
-          <div class="faq-a">Разборы реальных проектов, уроки по Python и aiogram, закрытый чат участников, доступ к исходникам готовых ботов и прямые эфиры с разбором кода. Написать в Telegram чтобы узнать актуальные условия.</div>
+          <div class="faq-a">Разборы реальных проектов, уроки по Python и aiogram, закрытый чат участников, доступ к исходникам готовых ботов и прямые эфиры с разбором кода. Подробности — в ссылке из описания.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Подойдёт ли бот для моей ниши? <span class="arr">+</span></div>
-          <div class="faq-a">Скорее всего да. Если в вашем бизнесе есть приём заявок, запись клиентов или продажа товаров/услуг — бот это автоматизирует. Напишите в Telegram и разберём вашу ситуацию.</div>
+          <div class="faq-a">Скорее всего да. Если в вашем бизнесе есть приём заявок, запись клиентов или продажа товаров и услуг — бот это автоматизирует. Детали по ссылке из описания.</div>
         </div>
       </div>
     </div>
@@ -629,7 +612,7 @@
   <section id="cta">
     <div class="wrap">
       <h2>Хотите такой же бот?</h2>
-      <p>Все ссылки — купить готового бота, заказать разработку или вступить в сообщество — в описании под видео.</p>
+      <p>Все ссылки — купить готовый бот, заказать разработку или вступить в сообщество — в описании под видео.</p>
       <div class="desc-banner">
         <span class="desc-arrow">👇</span>
         <span>Ссылки в описании под видео</span>
@@ -644,10 +627,7 @@
 
   <script>
     document.querySelectorAll('.faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.parentElement;
-        item.classList.toggle('open');
-      });
+      q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
     });
   </script>
 
