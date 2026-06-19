@@ -394,13 +394,16 @@
       box-shadow: 0 18px 44px rgba(2,8,23,0.34);
     }
     .offer.featured {
-      background: var(--card2);
-      border-color: rgba(34,211,238,0.30);
+      background: linear-gradient(160deg, rgba(34,211,238,0.10) 0%, rgba(99,102,241,0.10) 100%);
+      border-color: rgba(34,211,238,0.50);
       position: relative;
-      box-shadow: 0 0 0 1px rgba(34,211,238,0.14);
+      box-shadow: 0 0 0 1px rgba(34,211,238,0.25), 0 0 48px rgba(34,211,238,0.12);
+      transform: translateY(-6px);
     }
     .offer.featured:hover {
-      border-color: rgba(34,211,238,0.50);
+      border-color: rgba(34,211,238,0.70);
+      box-shadow: 0 0 0 1px rgba(34,211,238,0.40), 0 0 64px rgba(34,211,238,0.20);
+      transform: translateY(-10px);
     }
     .offer-badge {
       position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
