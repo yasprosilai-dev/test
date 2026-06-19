@@ -33,12 +33,7 @@
       --rl:      10px;
     }
 
-    html {
-      scroll-behavior: smooth; background: var(--bg); overflow-x: hidden;
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      height: 100%;
-    }
+    html { scroll-behavior: smooth; background: var(--bg); overflow-x: hidden; }
 
     body {
       background: var(--bg);
@@ -136,15 +131,9 @@
     }
 
     /* ── LAYOUT ── */
-    section, .split-div {
-      scroll-snap-align: start;
-      min-height: 100dvh;
-      display: flex; flex-direction: column; justify-content: center;
-    }
-    footer { scroll-snap-align: start; }
     section { padding: 40px; }
     footer  { padding: 40px; }
-    .wrap { max-width: 1200px; margin: 0 auto; width: 100%; }
+    .wrap { max-width: 1200px; margin: 0 auto; }
 
     .eyebrow-lbl {
       display: inline-flex; align-items: center; gap: 8px;
