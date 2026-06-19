@@ -68,20 +68,31 @@
       filter: blur(20px);
     }
 
-    /* dot grid overlay */
+    /* dot grid overlay — hero only */
     .site-bg::after {
       pointer-events: none;
       content: "";
-      position: fixed;
-      inset: 0;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 100dvh;
       z-index: 0;
-      background-image: radial-gradient(circle, rgba(226,232,240,0.38) 1px, transparent 1.45px);
+      background-image: radial-gradient(circle, rgba(226,232,240,0.32) 1px, transparent 1.45px);
       background-size: 18px 18px;
-      mask-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0.7) 60%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
     }
 
     /* everything above bg */
     nav, section, .split-div, footer { position: relative; z-index: 1; }
+
+    /* section backgrounds */
+    #pain    { background: var(--bg2); }
+    #how     { background: var(--bg3); }
+    #demo    { background: var(--bg2); }
+    #stats   { background: var(--bg3); }
+    #offers  { background: var(--bg2); }
+    #faq     { background: var(--bg3); }
+    #cta     { background: var(--bg2); }
+    footer   { background: var(--bg3); }
 
     /* ── NAV ── */
     nav {
