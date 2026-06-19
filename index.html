@@ -86,26 +86,26 @@
     /* ── SECTION NAV BUTTON ── */
     .section-nav-btn {
       float: right;
-      width: 44px; height: 44px;
+      width: 48px; height: 48px;
       border-radius: 50%;
-      background: rgba(34,211,238,0.08);
-      border: 1px solid rgba(34,211,238,0.50);
-      color: var(--cyan);
+      background: #22d3ee;
+      border: none;
+      color: #0f172a;
       display: inline-flex; align-items: center; justify-content: center;
       cursor: pointer;
-      transition: background .2s, border-color .2s, box-shadow .2s, transform .15s;
-      box-shadow: 0 0 18px rgba(34,211,238,0.20);
+      transition: background .2s, box-shadow .2s, transform .15s;
+      box-shadow: 0 4px 20px rgba(34,211,238,0.45);
       text-decoration: none;
-      margin-left: 16px;
+      margin-left: 12px;
+      flex-shrink: 0;
     }
     .section-nav-btn:hover {
-      background: rgba(34,211,238,0.18);
-      border-color: var(--cyan);
-      box-shadow: 0 0 32px rgba(34,211,238,0.40);
+      background: #67e8f9;
+      box-shadow: 0 4px 28px rgba(34,211,238,0.65);
       transform: scale(1.1);
-      color: var(--cyan);
+      color: #0f172a;
     }
-    .section-nav-btn svg { width: 20px; height: 20px; }
+    .section-nav-btn svg { width: 22px; height: 22px; stroke-width: 3; }
 
     /* content blocks with rounded bg on top of dots */
     section .wrap {
