@@ -84,19 +84,23 @@
     nav, section, .split-div, footer { position: relative; z-index: 1; }
 
     /* ── SECTION NAV BUTTON ── */
+    .section-nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
     .section-nav-btn {
-      float: right;
       width: 48px; height: 48px;
       border-radius: 50%;
       background: #22d3ee;
       border: none;
       color: #0f172a;
-      display: inline-flex; align-items: center; justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       cursor: pointer;
       transition: background .2s, box-shadow .2s, transform .15s;
       box-shadow: 0 4px 20px rgba(34,211,238,0.45);
       text-decoration: none;
-      margin-left: 12px;
       flex-shrink: 0;
     }
     .section-nav-btn:hover {
@@ -542,10 +546,12 @@
   <!-- HERO -->
   <section id="hero">
     <div class="wrap">
-      <a href="#pain" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-      <div class="hero-pill">
+      <div class="section-nav-row">
+        <div class="hero-pill">
         <span class="hero-pill-dot"></span>
         Telegram-боты для бизнеса
+        </div>
+        <a href="#pain" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
       </div>
       <h1>Telegram Бот для вашего бизнеса,<br>принимает заказы,<br>пока вы <em>работаете</em></h1>
       <p class="hero-sub">Клиент проходит опрос, видит цену и отправляет заявку — без вашего участия. Вы получаете готовую карточку и ведёте заказ кнопками.</p>
@@ -562,8 +568,10 @@
   <!-- PROBLEM -->
   <section id="pain">
     <div class="wrap">
-      <a href="#how" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-      <div class="eyebrow-lbl"><span class="dot"></span> Проблема</div>
+      <div class="section-nav-row">
+        <div class="eyebrow-lbl"><span class="dot"></span> Проблема</div>
+        <a href="#how" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+      </div>
       <h2>Знакомо?</h2>
       <div class="pain-grid">
         <div class="pain-card">
@@ -595,8 +603,10 @@
   <!-- HOW IT WORKS -->
   <section id="how">
     <div class="wrap">
-      <a href="#demo" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-      <div class="eyebrow-lbl"><span class="dot"></span> Путь клиента</div>
+      <div class="section-nav-row">
+        <div class="eyebrow-lbl"><span class="dot"></span> Путь клиента</div>
+        <a href="#demo" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+      </div>
       <h2>Как работает бот</h2>
       <p class="section-sub">Клиент сам проходит все шаги. Вы получаете готовую заявку и управляете ею кнопками.</p>
       <div class="steps">
@@ -641,8 +651,10 @@
   <!-- ADMIN DEMO -->
   <section id="demo">
     <div class="wrap">
-      <a href="#stats" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-      <div class="eyebrow-lbl"><span class="dot"></span> Сторона администратора</div>
+      <div class="section-nav-row">
+        <div class="eyebrow-lbl"><span class="dot"></span> Сторона администратора</div>
+        <a href="#stats" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+      </div>
       <h2>Что происходит после заявки</h2>
       <p class="section-sub">Каждый заказ — отдельный топик в Telegram-группе. Никаких CRM, никаких переключений — всё прямо в телефоне.</p>
 
@@ -707,8 +719,10 @@
   <!-- STATS -->
   <section id="stats">
     <div class="wrap">
-      <a href="#offers" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-      <div class="eyebrow-lbl"><span class="dot"></span> В цифрах</div>
+      <div class="section-nav-row">
+        <div class="eyebrow-lbl"><span class="dot"></span> В цифрах</div>
+        <a href="#offers" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+      </div>
       <h2>Что получает бизнес</h2>
       <div class="stats">
         <div class="stat">
@@ -745,8 +759,10 @@
   <!-- OFFERS -->
   <section id="offers">
     <div class="wrap">
-      <a href="#faq" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-      <div class="eyebrow-lbl"><span class="dot"></span> Что предлагаю</div>
+      <div class="section-nav-row">
+        <div class="eyebrow-lbl"><span class="dot"></span> Что предлагаю</div>
+        <a href="#faq" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+      </div>
       <h2>Три варианта сотрудничества</h2>
       <p class="section-sub">В зависимости от того, что вам нужно прямо сейчас.</p>
 
@@ -804,8 +820,10 @@
   <!-- FAQ -->
   <section id="faq">
     <div class="wrap">
-      <a href="#cta" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
-      <div class="eyebrow-lbl"><span class="dot"></span> Вопросы</div>
+      <div class="section-nav-row">
+        <div class="eyebrow-lbl"><span class="dot"></span> Вопросы</div>
+        <a href="#cta" class="section-nav-btn" aria-label="Далее"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+      </div>
       <h2>Часто спрашивают</h2>
       <div class="faq">
         <div class="faq-item">
