@@ -85,30 +85,27 @@
 
     /* ── SECTION NAV BUTTON ── */
     .section-nav-btn {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 40px; height: 40px;
+      float: right;
+      width: 44px; height: 44px;
       border-radius: 50%;
-      background: rgba(11,15,23,0.95);
-      border: 1px solid rgba(34,211,238,0.40);
+      background: rgba(34,211,238,0.08);
+      border: 1px solid rgba(34,211,238,0.50);
       color: var(--cyan);
-      display: grid; place-items: center;
+      display: inline-flex; align-items: center; justify-content: center;
       cursor: pointer;
       transition: background .2s, border-color .2s, box-shadow .2s, transform .15s;
-      box-shadow: 0 0 16px rgba(34,211,238,0.16);
-      z-index: 5;
+      box-shadow: 0 0 18px rgba(34,211,238,0.20);
       text-decoration: none;
+      margin-left: 16px;
     }
     .section-nav-btn:hover {
-      background: rgba(34,211,238,0.12);
+      background: rgba(34,211,238,0.18);
       border-color: var(--cyan);
-      box-shadow: 0 0 28px rgba(34,211,238,0.34);
+      box-shadow: 0 0 32px rgba(34,211,238,0.40);
       transform: scale(1.1);
       color: var(--cyan);
     }
-    .section-nav-btn svg { width: 18px; height: 18px; transition: transform .2s; }
-    .section-nav-btn:hover svg { transform: translateY(2px); }
+    .section-nav-btn svg { width: 20px; height: 20px; }
 
     /* content blocks with rounded bg on top of dots */
     section .wrap {
