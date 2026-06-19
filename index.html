@@ -269,6 +269,23 @@
     .stat-n { font-size: 36px; font-weight: 800; color: var(--gold2); line-height: 1; }
     .stat-l { font-size: 12px; color: var(--tx2); margin-top: 6px; }
 
+    /* ── OFFER NOTE ── */
+    .offer-btn-note {
+      text-align: center; padding: 12px 20px;
+      border-radius: 99px; font-size: 13px; font-weight: 500;
+      color: var(--tx3); border: 1px dashed var(--bd);
+    }
+
+    /* ── DESC BANNER ── */
+    .desc-banner {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: var(--gdim); border: 1px solid var(--grng);
+      border-radius: var(--rl); padding: 16px 28px;
+      font-size: 16px; font-weight: 600; color: var(--gold2);
+      margin-top: 28px;
+    }
+    .desc-arrow { font-size: 22px; }
+
     /* ── FAQ ── */
     .faq { display: flex; flex-direction: column; gap: 2px; margin-top: 36px; }
     .faq-item {
@@ -334,7 +351,7 @@
   <nav>
     <div class="nav-in">
       <div class="logo">🌿 Striga<span>Print</span></div>
-      <a href="https://t.me/YOUR_USERNAME" class="nav-cta">Написать в Telegram</a>
+      <div class="nav-cta">🔗 Ссылки в описании</div>
     </div>
   </nav>
 
@@ -348,6 +365,7 @@
         <a href="#offers" class="btn-primary">Посмотреть варианты →</a>
         <a href="#how" class="btn-ghost">Как это работает</a>
       </div>
+      <p style="margin-top:20px; font-size:13px; color:var(--tx3);">🔗 Все ссылки — в описании под видео</p>
     </div>
   </section>
 
@@ -440,7 +458,7 @@
             <li>Двусторонний чат с клиентом</li>
             <li>Настройка и деплой включены</li>
           </ul>
-          <a href="https://t.me/YOUR_USERNAME" class="offer-btn outline">Узнать стоимость →</a>
+          <div class="offer-btn-note">🔗 Ссылка в описании под видео</div>
         </div>
 
         <!-- 2 FEATURED -->
@@ -456,7 +474,7 @@
             <li>Панель управления заказами</li>
             <li>Поддержка после запуска</li>
           </ul>
-          <a href="https://t.me/YOUR_USERNAME" class="offer-btn primary">Обсудить проект →</a>
+          <div class="offer-btn-note">🔗 Ссылка в описании под видео</div>
         </div>
 
         <!-- 3 -->
@@ -471,7 +489,7 @@
             <li>Закрытый чат участников</li>
             <li>Доступ к исходникам ботов</li>
           </ul>
-          <a href="https://t.me/YOUR_USERNAME" class="offer-btn outline">Узнать про вступление →</a>
+          <div class="offer-btn-note">🔗 Ссылка в описании под видео</div>
         </div>
 
       </div>
@@ -610,10 +628,11 @@
   <!-- CTA -->
   <section id="cta">
     <div class="wrap">
-      <h2>Готовы автоматизировать приём заказов?</h2>
-      <p>Напишите в Telegram — обсудим ваш проект и подберём подходящий вариант.</p>
-      <div class="btns">
-        <a href="https://t.me/YOUR_USERNAME" class="btn-primary">Написать в Telegram →</a>
+      <h2>Хотите такой же бот?</h2>
+      <p>Все ссылки — купить готового бота, заказать разработку или вступить в сообщество — в описании под видео.</p>
+      <div class="desc-banner">
+        <span class="desc-arrow">👇</span>
+        <span>Ссылки в описании под видео</span>
       </div>
     </div>
   </section>
