@@ -321,9 +321,12 @@
 
     /* ── SPLIT DIVIDER ── */
     .split-div {
-      padding: 56px 40px;
+      min-height: 100dvh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 80px 40px;
       background:
-        radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.16), transparent 60%),
+        radial-gradient(ellipse at 50% 40%, rgba(99,102,241,0.18), transparent 60%),
         var(--bg2);
       border-top: 1px solid var(--bd);
       border-bottom: 1px solid var(--bd);
